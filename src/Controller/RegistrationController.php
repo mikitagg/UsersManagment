@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\AppCustomAuthenticator;
+use App\Service\RegisterUser;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,32 +17,22 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 class RegistrationController extends AbstractController
 {
     #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager,AppCustomAuthenticator $appAuthenticator, UserAuthenticatorInterface $authenticator): Response
+    public function register(
+        Request $request,
+        AppCustomAuthenticator $appAuthenticator,
+        UserAuthenticatorInterface $authenticator,
+        RegisterUser $registerUser
+    ): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $user->setPassword(
-                $userPasswordHasher->hashPassword(
-                    $user,
-                    $form->get('plainPassword')->getData()
-                )
-            );
-            $user->setRoles(['ROLE_ADMIN']);
-            $user->setRegistrationDate();
-            $user->setLastLoginDate();
-            $user->setStatus('Active');
-    
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            return $authenticator->authenticateUser($user, $appAuthenticator, $request);
+        if (!$form->isSubmitted() || !$form->isValid()) {
+            return $this->render('registration/register.html.twig', [
+                'registrationForm' => $form,
+            ]);
         }
-
-        return $this->render('registration/register.html.twig', [
-            'registrationForm' => $form,
-        ]);
+        $registerUser->setUser($user, $form);
+        return $authenticator->authenticateUser($user, $appAuthenticator, $request);
     }
 }

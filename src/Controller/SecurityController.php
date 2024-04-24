@@ -13,9 +13,6 @@ use Symfony\Bundle\SecurityBundle\Security;
 class SecurityController extends AbstractController
 {
 
-    public function __construct(
-    ) {}
-
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {

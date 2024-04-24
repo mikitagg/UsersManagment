@@ -6,12 +6,13 @@ use App\Entity\User;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Http\SecurityRequestAttributes;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Bundle\SecurityBundle\Security;
-
+use \Symfony\Component\HttpFoundation\RedirectResponse;
 
 class UsersController extends AbstractController
 {
@@ -25,10 +26,9 @@ class UsersController extends AbstractController
     }
 
     #[Route('/users')]
-    public function Table(UserRepository $userRepository)
+    public function Table(UserRepository $userRepository): Response
     {
         $users = $userRepository->findAll();
-
         return $this->render('table/table.html.twig', [
             'users' => $users,
         ]);
@@ -41,7 +41,7 @@ class UsersController extends AbstractController
     }
 
     #[Route('/users/action', name: 'userAction', methods: ['POST'])]
-    public function userActions(Request $request, UserRepository $userRepository)
+    public function userActions(Request $request): RedirectResponse
     {
         $action = $request->get('action');
         $selectedUsers = $request->get('selected_users');
@@ -53,33 +53,29 @@ class UsersController extends AbstractController
             $this->deleteAction($selectedUsers);
         }
         if ($action === 'block') {
-                $this->blockAction($selectedUsers);
+            $this->blockAction($selectedUsers);
         }
         if ($action === 'unblock') {
-                $this->unblockAction($selectedUsers);
+            $this->unblockAction($selectedUsers);
         }
-
         $this->entityManager->flush();
-
         return $this->redirectToRoute('app_users_table');
 
     }
 
-    public function deleteAction(array $selected)
+    public function deleteAction(array $selected): void
     {
         $currentUser = $this->security->getUser();
         if (in_array($currentUser->getId(), $selected)) {
             $this->security->logout(false);
         }
-
         foreach ($selected as $id) {
-
             $user = $this->entityManager->getRepository(User::class)->find($id);
             $this->entityManager->remove($user);
         }
     }
 
-    public function blockAction(array $selected)
+    public function blockAction(array $selected): void
     {
         foreach ($selected as $id) {
             $user = $this->entityManager->getRepository(User::class)->find($id);
@@ -90,7 +86,7 @@ class UsersController extends AbstractController
         }
     }
 
-    public function unblockAction(array $selected)
+    public function unblockAction(array $selected): void
     {
         foreach ($selected as $id) {
             $user = $this->entityManager->getRepository(User::class)->find($id);

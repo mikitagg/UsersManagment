@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="app">
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="migrations cleanup">
+      <change afterPath="$PROJECT_DIR$/src/Service/RegisterUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240420003140.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240420014648.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240420015031.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240420015154.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240420020015.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240422195731.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240422203252.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20240423124248.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventListener/LoginListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/LoginListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +243,9 @@
       <workItem from="1713962756164" duration="1966000" />
       <workItem from="1713965299439" duration="5605000" />
       <workItem from="1713971323873" duration="324000" />
-      <workItem from="1713981933721" duration="4371000" />
+      <workItem from="1713981933721" duration="4591000" />
+      <workItem from="1713992890001" duration="3885000" />
+      <workItem from="1713997086455" duration="1031000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -253,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713985740870</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="migrations cleanup">
+      <option name="closed" value="true" />
+      <created>1713986730909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713986730909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,17 +271,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="app" />
-    <option name="LAST_COMMIT_MESSAGE" value="app" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/SecurityController.php</url>
-          <line>22</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="migrations cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="migrations cleanup" />
   </component>
 </project>
