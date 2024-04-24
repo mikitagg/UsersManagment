@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}users{% endblock %}
+
+{% block body %}
+        <div class="Container">
+            <div class="nav m-3 justify-content-end">
+                <div class="nav-item col-auto">
+                  <span>
+                      {{ app.user.userIdentifier }}
+                  </span>
+                    <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            </div>
+            <div class="card-header nav-item justify-content-end">
+                <h5 class="card-title text-center">Users</h5>
+            </div>
+
+            <div>
+                <form method="post" action="{{ path('userAction') }}">
+                    <div class="mb-0 m-5">
+                        <button class="btn btn-danger btn-block" type="submit" name="action" value="delete">Delete</button>
+                        <button class="btn btn-light btn-block" type="submit" name="action" value="block">Block</button>
+                        <button class="btn btn-light btn-block" type="submit" name="action" value="unblock">Unblock</button>
+                    </div>
+                    <div class="row m-5">
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <label for="selectAllCheckbox"></label><input id="selectAllCheckbox" type="checkbox" class="checkAll">
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Registration</th>
+                                    <th>Last login</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for user in users %}
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox" class="check" name="selected_users[]"  value="{{ user.id }}">
+                                            </label>
+                                        </td>
+                                        <td>{{ user.name }}</td>
+                                        <td>{{ user.email }}</td>
+                                        <td>{{ user.registrationDate|date('Y-m-d H:i:s') }}</td>
+                                        <td>{{ user.lastLoginDate|date('Y-m-d H:i:s') }}</td>
+                                        <td>{{ user.status }}</td>
+
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td colspan="7">no records found</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <script src="{{ asset('js/table.js') }}"></script>
+{% endblock %}
