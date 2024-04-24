@@ -4,40 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/cb7d1aed-b5cc-4e19-ab9c-7660977226ae.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/cb7d1aed-b5cc-4e19-ab9c-7660977226ae/storage_v2/_src_/schema/itransition.fr4Iqw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/magento2plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240420003140.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240420014648.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240420015031.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240420015154.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240420020015.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240422195731.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240422203252.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20240423124248.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventListener/LoginListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/table/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="app">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240420003140.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240420014648.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240420015031.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240420015154.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240420020015.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240422195731.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240422203252.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20240423124248.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,12 +243,25 @@
       <workItem from="1713962756164" duration="1966000" />
       <workItem from="1713965299439" duration="5605000" />
       <workItem from="1713971323873" duration="324000" />
-      <workItem from="1713981933721" duration="3545000" />
+      <workItem from="1713981933721" duration="4371000" />
     </task>
+    <task id="LOCAL-00001" summary="app">
+      <option name="closed" value="true" />
+      <created>1713985740870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713985740870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="app" />
+    <option name="LAST_COMMIT_MESSAGE" value="app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
