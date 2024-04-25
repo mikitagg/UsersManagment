@@ -24,7 +24,7 @@ services:
 ###< symfony/mercure-bundle ###
 
 ###> doctrine/doctrine-bundle ###
-  database:
+  mysql:
     ports:
       - "3306"
 ###< doctrine/doctrine-bundle ###
