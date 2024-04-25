@@ -9,7 +9,7 @@ services:
       TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}
       TRUSTED_HOSTS: ${TRUSTED_HOSTS:-^${SERVER_NAME:-example\.com|localhost}|php$$}
       # Run "composer require symfony/orm-pack" to install and configure Doctrine ORM
-      DATABASE_URL: mysql://${MYSQL_USER:-test}:${MYSQL_PASSWORD:-!Elena@1337!}@database:3306/${MYSQL_DATABASE:-itransition}?serverVersion=${MYSQL_VERSION:-8}&charset=${MYSQL_CHARSET:-utf8mb4}
+      DATABASE_URL: mysql://${MYSQL_USER:-test}:${MYSQL_PASSWORD:-!Elena@1337!}@database:3306/${MYSQL_DATABASE:-itransition}?serverVersion=${MYSQL_VERSION:-8.0.36}&charset=${MYSQL_CHARSET:-utf8mb4}
       # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
       MERCURE_URL: ${CADDY_MERCURE_URL:-http://php/.well-known/mercure}
       MERCURE_PUBLIC_URL: ${CADDY_MERCURE_PUBLIC_URL:-https://${SERVER_NAME:-localhost}/.well-known/mercure}
@@ -40,13 +40,13 @@ services:
 
 ###> doctrine/doctrine-bundle ###
   database:
-    image: mysql:${MYSQL_VERSION:-8}
+    image: mysql:${MYSQL_VERSION:-8.0.36}
     environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-itransition}
       # You should definitely change the password in production
-      MYSQL_RANDOM_ROOT_PASSWORD: "true"
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-!ChangeMe!}
-      MYSQL_USER: ${MYSQL_USER:-app}
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-!test!}
+      MYSQL_USER: ${MYSQL_USER:-test}
     healthcheck:
       test: ["CMD", "pg_isready -U ${POSTGRES_USER:-app}"]
       timeout: 5s
