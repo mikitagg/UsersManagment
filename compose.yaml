@@ -61,8 +61,8 @@ services:
       - "3306:3306"
     networks:
       - app-network
+ 
 
-volumes:
   caddy_data:
   caddy_config:
   ###> symfony/mercure-bundle ###
