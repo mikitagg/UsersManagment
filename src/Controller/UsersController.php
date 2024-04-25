@@ -94,7 +94,4 @@ class UsersController extends AbstractController
             $user->setIsBlocked(false);
         }
     }
-
-
-
 }

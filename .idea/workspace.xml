@@ -4,17 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="migrations cleanup">
-      <change afterPath="$PROJECT_DIR$/src/Service/RegisterUser.php" afterDir="false" />
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.prod.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/alpine.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/digitalocean-dns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/digitalocean-droplet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/existing-project.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/extra-services.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/makefile.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mysql.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/options.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/production.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tls.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/troubleshooting.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/updating.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/xdebug.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/Caddyfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/app.dev.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/app.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/app.prod.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/docker-entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frankenphp/worker.Caddyfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.override.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.override.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/messenger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/messenger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventListener/LoginListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/LoginListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +275,9 @@
       <workItem from="1713971323873" duration="324000" />
       <workItem from="1713981933721" duration="4591000" />
       <workItem from="1713992890001" duration="3885000" />
-      <workItem from="1713997086455" duration="1031000" />
+      <workItem from="1713997086455" duration="3537000" />
+      <workItem from="1714001519222" duration="1143000" />
+      <workItem from="1714002768366" duration="1602000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -263,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713986730909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1713998139640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713998139640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +312,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="app" />
     <MESSAGE value="migrations cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrations cleanup" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
 </project>
