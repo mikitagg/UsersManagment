@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="preparing for prod">
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="preparing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frankenphp/Caddyfile" beforeDir="false" afterPath="$PROJECT_DIR$/frankenphp/Caddyfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frankenphp/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/frankenphp/docker-entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/Caddyfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/conf.d/app.dev.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/conf.d/app.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/conf.d/app.prod.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/docker-entrypoint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/worker.Caddyfile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +306,7 @@
       <workItem from="1714068221322" duration="1705000" />
       <workItem from="1714077265277" duration="10859000" />
       <workItem from="1714088949881" duration="3483000" />
-      <workItem from="1714231066554" duration="713000" />
+      <workItem from="1714231066554" duration="2717000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -423,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714090638443</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="preparing">
+      <option name="closed" value="true" />
+      <created>1714231843541</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714231843541</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +449,8 @@
     <MESSAGE value="docker add" />
     <MESSAGE value="correct mistakes" />
     <MESSAGE value="preparing for prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparing for prod" />
+    <MESSAGE value="preparing" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

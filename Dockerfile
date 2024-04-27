@@ -1,99 +1,33 @@
-#syntax=docker/dockerfile:1.4
+FROM php:8.2-fpm
 
-# Versions
-FROM dunglas/frankenphp:1-php8.3 AS frankenphp_upstream
+RUN apt-get update && apt-get install -y \
+        nginx \
+        git \
+        unzip \
+        libpng-dev \
+        libonig-dev \
+        libpq-dev \
+        libxml2-dev \
+        zip \
+        curl \
+        && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# The different stages of this Dockerfile are meant to be built into separate images
-# https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage
-# https://docs.docker.com/compose/compose-file/#target
-
-
-# Base FrankenPHP image
-FROM frankenphp_upstream AS frankenphp_base
-
-WORKDIR /app
-
-# persistent / runtime deps
-# hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
-	acl \
-	file \
-	gettext \
-	git \
-	&& rm -rf /var/lib/apt/lists/*
-
-RUN set -eux; \
-	install-php-extensions \
-		@composer \
-		apcu \
-		intl \
-		opcache \
-		zip \
-		sockets \
-        amqp \
-        pdo \
-        mysqli \
-        pdo_mysql \
-	;
-
-# https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
-###> recipes ###
-###> doctrine/doctrine-bundle ###
-RUN install-php-extensions pdo_pgsql
-###< doctrine/doctrine-bundle ###
-###< recipes ###
+RUN docker-php-ext-install pdo_mysql pgsql mbstring exif pcntl bcmath gd
 
-COPY --link frankenphp/conf.d/app.ini $PHP_INI_DIR/conf.d/
-COPY --link --chmod=755 frankenphp/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
-COPY --link frankenphp/Caddyfile /etc/caddy/Caddyfile
+COPY ./ /var/www
+WORKDIR /var/www
 
-ENTRYPOINT ["docker-entrypoint"]
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN composer install --no-dev --optimize-autoloader
+RUN composer require symfony/maker-bundle
 
-HEALTHCHECK --start-period=60s CMD curl -f http://localhost:2019/metrics || exit 1
-CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile" ]
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/
 
-# Dev FrankenPHP image
-FROM frankenphp_base AS frankenphp_dev
+RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
 
-ENV APP_ENV=dev XDEBUG_MODE=off
-VOLUME /app/var/
+EXPOSE 80 9000
 
-RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
-
-RUN set -eux; \
-	install-php-extensions \
-		xdebug \
-	;
-
-COPY --link frankenphp/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
-
-CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile", "--watch" ]
-
-# Prod FrankenPHP image
-FROM frankenphp_base AS frankenphp_prod
-
-ENV APP_ENV=prod
-ENV FRANKENPHP_CONFIG="import worker.Caddyfile"
-
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
-
-COPY --link frankenphp/conf.d/app.prod.ini $PHP_INI_DIR/conf.d/
-COPY --link frankenphp/worker.Caddyfile /etc/caddy/worker.Caddyfile
-
-# prevent the reinstallation of vendors at every changes in the source code
-COPY --link composer.* symfony.* ./
-RUN set -eux; \
-	composer install --no-cache --prefer-dist --no-dev --no-autoloader --no-scripts --no-progress
-
-# copy sources
-COPY --link . ./
-RUN rm -Rf frankenphp/
-
-RUN set -eux; \
-	mkdir -p var/cache var/log; \
-	composer dump-autoload --classmap-authoritative --no-dev; \
-	composer dump-env prod; \
-	composer run-script --no-dev post-install-cmd; \
-	chmod +x bin/console; sync;
+CMD php-fpm -D && nginx -g 'daemon off;'
