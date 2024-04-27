@@ -1,9 +1,0 @@
-services:
-  db:
-    image: mysql:8.0.36
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: itransition
-    ports:
-        - "3306:3306"
-
