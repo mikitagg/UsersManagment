@@ -11,8 +11,13 @@
                     <div class="card-header">
                         <h5 class="card-title text-center">Sign Up</h5>
                     </div>
-                    {{ form_errors(registrationForm) }}
+
                     <div class="card-body">
+                        {% for message in errors %}
+                            <div class="alert alert-danger">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
                         <form method="post" action="{{ path('app_register') }}">
                             {{ form_start(registrationForm) }}
                             <div class="mb-3">

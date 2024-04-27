@@ -32,5 +32,4 @@ EXPOSE 80 9000
 
 CMD php-fpm -D && nginx -g 'daemon off;'
 
-RUN php bin/console doctrine:migrations:migrate
 

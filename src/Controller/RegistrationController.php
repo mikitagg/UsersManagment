@@ -28,8 +28,13 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
         if (!$form->isSubmitted() || !$form->isValid()) {
+            $errors = [];
+            foreach ($form->getErrors(true) as $error) {
+                $errors[] = $error->getMessage();
+            }
             return $this->render('registration/register.html.twig', [
                 'registrationForm' => $form,
+                'errors' => $errors
             ]);
         }
         $registerUser->setUser($user, $form);
