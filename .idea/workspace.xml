@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="preparing for deploy">
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="change dockerfile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +194,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
+  <component name="RunManager" selected="PHP Web Page.ter">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -299,7 +300,7 @@
       <workItem from="1714068221322" duration="1705000" />
       <workItem from="1714077265277" duration="10859000" />
       <workItem from="1714088949881" duration="3483000" />
-      <workItem from="1714231066554" duration="6163000" />
+      <workItem from="1714231066554" duration="8489000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -469,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714238812621</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="change dockerfile">
+      <option name="closed" value="true" />
+      <created>1714239155689</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714239155689</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +493,8 @@
     <MESSAGE value="preparing for prod" />
     <MESSAGE value="preparing" />
     <MESSAGE value="preparing for deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparing for deploy" />
+    <MESSAGE value="change dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="change dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
