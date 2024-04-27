@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="composer update">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-    </list>
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="migration update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -303,7 +298,7 @@
       <workItem from="1714068221322" duration="1705000" />
       <workItem from="1714077265277" duration="10859000" />
       <workItem from="1714088949881" duration="3483000" />
-      <workItem from="1714231066554" duration="23071000" />
+      <workItem from="1714231066554" duration="23443000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -553,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714255745206</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="migration update">
+      <option name="closed" value="true" />
+      <created>1714257083307</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714257083307</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +579,8 @@
     <MESSAGE value="composer &amp; Dockerfile updating" />
     <MESSAGE value="dockerfile updating" />
     <MESSAGE value="composer update" />
-    <option name="LAST_COMMIT_MESSAGE" value="composer update" />
+    <MESSAGE value="migration update" />
+    <option name="LAST_COMMIT_MESSAGE" value="migration update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

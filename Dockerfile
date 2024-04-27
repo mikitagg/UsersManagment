@@ -31,3 +31,6 @@ RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
 EXPOSE 80 9000
 
 CMD php-fpm -D && nginx -g 'daemon off;'
+
+RUN php bin/console doctrine:migrations:migrate
+
