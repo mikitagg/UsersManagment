@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="fix for deploy">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="b4c00984-a28d-4fce-9fd9-28bff0c1ab0d" name="Changes" comment="db fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +299,7 @@
       <workItem from="1714068221322" duration="1705000" />
       <workItem from="1714077265277" duration="10859000" />
       <workItem from="1714088949881" duration="3483000" />
-      <workItem from="1714231066554" duration="10578000" />
+      <workItem from="1714231066554" duration="11825000" />
     </task>
     <task id="LOCAL-00001" summary="app">
       <option name="closed" value="true" />
@@ -495,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714243001269</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="db fix">
+      <option name="closed" value="true" />
+      <created>1714244347173</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714244347173</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +518,8 @@
     <MESSAGE value="preparing for deploy" />
     <MESSAGE value="change dockerfile" />
     <MESSAGE value="fix for deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix for deploy" />
+    <MESSAGE value="db fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="db fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
