@@ -15,5 +15,14 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="itransition@localhost [2]" uuid="78febed0-b479-43d2-baed-44c0a24126e3">
+      <database-info product="PostgreSQL" version="14.11 (Ubuntu 14.11-0ubuntu0.22.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="14.11" exact-driver-version="42.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>dev</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
